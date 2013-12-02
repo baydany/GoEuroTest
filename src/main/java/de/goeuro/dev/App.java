@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import de.goeuro.dev.dsl.geo.Results;
 import de.goeuro.dev.App;
 import de.goeuro.dev.util.CsvWriter;
-import de.goeuro.dev.util.HttpConnector;
+import de.goeuro.dev.util.HttpsConnector;
 
 /**
  * Hello world!
@@ -24,7 +24,7 @@ public class App {
 		}
 		
 		if (args.length > 0) {
-			HttpConnector hc = new HttpConnector();
+			HttpsConnector hc = new HttpsConnector();
 			StringBuffer sb = hc.getJson(args[0]);
 
 			String jsonString = null;
